@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Indiana Jones — Watch Party della Trilogia</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Rye&family=Cinzel:wght@400;600;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
-<style>
 /* ===================================================
    CSS VARIABLES & RESET
    =================================================== */
@@ -382,7 +372,6 @@ section { position:relative; padding:5rem 2rem; }
   background:rgba(201,148,10,.07);
   border:1px solid var(--gold-dim);
   text-shadow:0 0 25px rgba(201,148,10,.5);
-  /* clip angoli */
   clip-path: polygon(8px 0%, calc(100% - 8px) 0%, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0% calc(100% - 8px), 0% 8px);
   animation: tickGlow 1s ease-in-out infinite alternate;
   transition: transform .1s;
@@ -445,7 +434,6 @@ section { position:relative; padding:5rem 2rem; }
     0 30px 60px rgba(0,0,0,.6);
 }
 
-/* angoletti del frame */
 .video-frame .vc { position:absolute; width:22px; height:22px; border-color:var(--gold-bright); border-style:solid; z-index:3; }
 .video-frame .vc.tl { top:-4px; left:-4px;  border-width:2px 0 0 2px; }
 .video-frame .vc.tr { top:-4px; right:-4px; border-width:2px 2px 0 0; }
@@ -456,7 +444,6 @@ section { position:relative; padding:5rem 2rem; }
   width:100%; height:100%; object-fit:cover; display:block;
 }
 
-/* Overlay placeholder */
 .video-overlay {
   position:absolute; inset:0;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -542,7 +529,6 @@ section { position:relative; padding:5rem 2rem; }
   line-height:1.65;
 }
 
-/* Programma */
 .program { margin-top:2.5rem; }
 
 .prog-row {
@@ -630,7 +616,6 @@ section { position:relative; padding:5rem 2rem; }
 .cta-btn:hover { background:var(--gold-bright); box-shadow:0 0 40px rgba(201,148,10,.5); }
 .cta-btn:hover::before { opacity:1; }
 
-/* Footer */
 .site-footer {
   position:absolute; bottom:1.8rem; left:0; right:0; text-align:center;
 }
@@ -639,7 +624,6 @@ section { position:relative; padding:5rem 2rem; }
   letter-spacing:.4em; color:rgba(201,148,10,.3);
 }
 
-/* Torcia flickering — elemento decorativo */
 .torch {
   position:absolute;
   display:flex; flex-direction:column; align-items:center;
@@ -687,320 +671,3 @@ section { position:relative; padding:5rem 2rem; }
   .hero-title { font-size:2.6rem; }
   .cd-box { font-size:1.8rem; width:62px; height:62px; }
 }
-</style>
-</head>
-<body>
-
-<!-- PARTICELLE -->
-<div class="dust" aria-hidden="true">
-  <div class="dust-mote"></div><div class="dust-mote"></div><div class="dust-mote"></div>
-  <div class="dust-mote"></div><div class="dust-mote"></div><div class="dust-mote"></div>
-  <div class="dust-mote"></div><div class="dust-mote"></div><div class="dust-mote"></div>
-  <div class="dust-mote"></div><div class="dust-mote"></div><div class="dust-mote"></div>
-  <div class="dust-mote"></div><div class="dust-mote"></div>
-  <div class="star-particle">✦</div>
-  <div class="star-particle">✦</div>
-  <div class="star-particle">✦</div>
-</div>
-
-<!-- ===================== HERO ===================== -->
-<section class="hero">
-  <div class="corner tl" aria-hidden="true"></div>
-  <div class="corner tr" aria-hidden="true"></div>
-  <div class="corner bl" aria-hidden="true"></div>
-  <div class="corner br" aria-hidden="true"></div>
-
-  <div class="hat" aria-hidden="true">
-    <div class="hat-crown"><div class="hat-indent"></div></div>
-    <div class="hat-band"></div>
-    <div class="hat-brim"></div>
-  </div>
-
-  <p class="hero-eyebrow">Una serata leggendaria vi attende</p>
-
-  <h1 class="hero-title">Indiana Jones</h1>
-  <p class="hero-trilogy">La Trilogia Completa — Watch Party</p>
-
-  <div class="whip" aria-hidden="true"></div>
-
-  <p class="hero-subtitle">Edizione Leggendaria · Solo per Invitati</p>
-
-  <p class="hero-intro">
-    Tre film. Un'unica notte. Riuniamoci per rivivere le avventure del più iconico 
-    archeologo del cinema — dal tempio perduto alle catacombe di Venezia, 
-    fino alle sabbie di una crociata eterna.<br>
-    L'avventura ci chiama. Rispondete all'appello.
-  </p>
-
-  <div class="scroll-cue" aria-hidden="true">
-    <span>Scorri</span>
-    <div class="arrow-down"></div>
-  </div>
-</section>
-
-<!-- ===================== COUNTDOWN ===================== -->
-<section class="countdown-section">
-  <div class="section-inner">
-    <span class="eyebrow">Conto alla rovescia</span>
-    <h2 class="s-title">La Leggenda Ritorna</h2>
-
-    <p class="countdown-intro">
-      Ogni grande avventura ha un momento preciso in cui tutto comincia.<br>
-      Non è solo un film — è un rito collettivo. Il tempo stringe.<br>
-      Preparate i popcorn, le coperte e la voglia di meravigliarvi.
-    </p>
-
-    <div class="countdown-grid">
-      <div class="cd-item">
-        <div class="cd-box" id="cd-days">00</div>
-        <span class="cd-label">Giorni</span>
-      </div>
-      <div class="cd-sep">:</div>
-      <div class="cd-item">
-        <div class="cd-box" id="cd-hours">00</div>
-        <span class="cd-label">Ore</span>
-      </div>
-      <div class="cd-sep">:</div>
-      <div class="cd-item">
-        <div class="cd-box" id="cd-min">00</div>
-        <span class="cd-label">Minuti</span>
-      </div>
-      <div class="cd-sep">:</div>
-      <div class="cd-item">
-        <div class="cd-box" id="cd-sec">00</div>
-        <span class="cd-label">Secondi</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== VIDEO ===================== -->
-<section class="video-section">
-  <div class="section-inner">
-    <span class="eyebrow">Anteprima</span>
-    <h2 class="s-title">Il Video della Serata</h2>
-    <p style="color:var(--parchment-mid);font-style:italic;margin-bottom:.5rem;font-size:.92rem;">
-      Inserisci qui il tuo <code style="color:var(--gold);font-style:normal">src="percorso/al/video.mp4"</code> e rimuovi l'overlay.
-    </p>
-
-    <div class="video-frame">
-      <div class="vc tl"></div><div class="vc tr"></div>
-      <div class="vc bl"></div><div class="vc br"></div>
-
-      <!-- ▼ Aggiungi src= al tag source quando hai il file video ▼ -->
-      <video id="main-video" controls preload="metadata">
-        <source src="" type="video/mp4">
-        Il tuo browser non supporta l&rsquo;elemento <code>video</code> HTML5.
-      </video>
-
-      <div class="video-overlay" id="video-overlay">
-        <div class="play-ring" aria-hidden="true"></div>
-        <p>Video in arrivo&hellip;</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== DETTAGLI ===================== -->
-<section class="details-section">
-  <div class="section-inner">
-    <span class="eyebrow">Dettagli del ritrovo</span>
-    <h2 class="s-title">Dove, Quando &amp; Come</h2>
-
-    <div class="cards-grid">
-      <div class="card">
-        <span class="card-icon">📍</span>
-        <span class="card-label">Luogo</span>
-        <p class="card-value">Casa di Marco</p>
-        <p class="card-sub">Via dell'Avventuriero, 42<br>Milano — Zona Navigli<br><em>(campanello: "Indy &amp; Co.")</em></p>
-      </div>
-      <div class="card">
-        <span class="card-icon">🎬</span>
-        <span class="card-label">Inizio Proiezioni</span>
-        <p class="card-value">ore 19:00</p>
-        <p class="card-sub">Apertura porte alle 18:30.<br>Non fare tardi —<br>la frusta non aspetta.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">🍿</span>
-        <span class="card-label">Cosa portare</span>
-        <p class="card-value">Sete d'avventura</p>
-        <p class="card-sub">Snack, bevande, coperta.<br>Popcorn forniti di casa.<br>Dress code: cappello facoltativo.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">✉️</span>
-        <span class="card-label">Conferma presenza</span>
-        <p class="card-value">Entro 3 giorni</p>
-        <p class="card-sub">Scrivi a Marco su WhatsApp<br>+39 333 000 0000<br>I posti sono limitati.</p>
-      </div>
-    </div>
-
-    <div class="ornament">
-      <div class="ornament-line"></div>
-      <span class="ornament-gem">✦</span>
-      <div class="ornament-line"></div>
-    </div>
-
-    <span class="eyebrow">Programma della serata</span>
-
-    <div class="program">
-      <div class="prog-row">
-        <span class="prog-time">18:30</span>
-        <div class="prog-info">
-          <h4>Apertura porte &amp; aperitivo</h4>
-          <p>Benvenuto con bibite e quiz sui personaggi della saga — chi sarà il più grande fan?</p>
-        </div>
-      </div>
-      <div class="prog-row">
-        <span class="prog-time">19:00</span>
-        <div class="prog-info">
-          <h4>🎬 I Predatori dell'Arca Perduta (1981)</h4>
-          <p>Il film che ha dato inizio alla leggenda. Raiders of the Lost Ark — dove tutto è cominciato.</p>
-        </div>
-      </div>
-      <div class="prog-row">
-        <span class="prog-time">21:15</span>
-        <div class="prog-info">
-          <h4>Pausa — Il Rifornimento dell'Esploratore</h4>
-          <p>20 minuti di pausa, pizza ordinata, chiacchiere. Recuperate fiato prima del secondo atto.</p>
-        </div>
-      </div>
-      <div class="prog-row">
-        <span class="prog-time">21:35</span>
-        <div class="prog-info">
-          <h4>🎬 Indiana Jones e il Tempio Maledetto (1984)</h4>
-          <p>Più oscuro, più adrenalinico. Una discesa agli inferi che lascia il segno.</p>
-        </div>
-      </div>
-      <div class="prog-row">
-        <span class="prog-time">23:30</span>
-        <div class="prog-info">
-          <h4>🎬 Indiana Jones e l'Ultima Crociata (1988)</h4>
-          <p>Il film del cuore. Indy &amp; suo padre — Sean Connery in una delle sue migliori interpretazioni.</p>
-        </div>
-      </div>
-      <div class="prog-row">
-        <span class="prog-time">01:30</span>
-        <div class="prog-info">
-          <h4>Fine serata &amp; saluti</h4>
-          <p>Discussioni animate, un brindisi all'avventura e buona fortuna per il rientro.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== CHIUSURA ===================== -->
-<section class="closing-section">
-  <div class="section-inner">
-    <div class="ornament">
-      <div class="ornament-line"></div>
-      <span class="ornament-gem">✦</span>
-      <div class="ornament-line"></div>
-    </div>
-
-    <!-- Torce CSS decorative -->
-    <div class="torch torch-left" aria-hidden="true">
-      <div class="torch-flame"></div>
-      <div class="torch-handle"></div>
-    </div>
-    <div class="torch torch-right" aria-hidden="true">
-      <div class="torch-flame"></div>
-      <div class="torch-handle"></div>
-    </div>
-
-    <span class="eyebrow">Il nostro invito</span>
-
-    <div class="quote-block">
-      <p class="quote-text">
-        Non è il cinema che ci riunisce — è il desiderio di vivere qualcosa insieme,
-        di ridere, meravigliarci e sentire di nuovo quel brivido che solo certi film
-        sanno regalarti. Vi aspettiamo. Con il cappello, la frusta e un bicchiere colmo.
-      </p>
-      <span class="quote-sig">— I vostri ospiti della serata</span>
-    </div>
-
-    <p class="tagline">It belongs in a museum — e anche voi, quella sera.</p>
-
-    <a class="cta-btn" href="https://wa.me/393330000000" target="_blank" rel="noopener">
-      Confermo la Presenza
-    </a>
-  </div>
-
-  <footer class="site-footer">
-    <p>Watch Party Privato &nbsp;·&nbsp; Trilogia di Indiana Jones &nbsp;·&nbsp; Solo per Invitati</p>
-  </footer>
-</section>
-
-<!-- ===================================================
-     JAVASCRIPT
-     =================================================== -->
-<script>
-/* ----- COUNTDOWN ----- */
-(function () {
-  const TARGET = new Date('2026-07-21T18:30:00');
-
-  const el = {
-    days:  document.getElementById('cd-days'),
-    hours: document.getElementById('cd-hours'),
-    min:   document.getElementById('cd-min'),
-    sec:   document.getElementById('cd-sec'),
-  };
-
-  let prevSec = -1;
-
-  function pad(n) { return String(n).padStart(2, '0'); }
-
-  function tick() {
-    const now  = new Date();
-    const diff = TARGET - now;
-
-    if (diff <= 0) {
-      Object.values(el).forEach(e => e.textContent = '00');
-      return;
-    }
-
-    const d = Math.floor(diff / 864e5);
-    const h = Math.floor((diff % 864e5) / 36e5);
-    const m = Math.floor((diff % 36e5)  / 6e4);
-    const s = Math.floor((diff % 6e4)   / 1e3);
-
-    el.days.textContent  = pad(d);
-    el.hours.textContent = pad(h);
-    el.min.textContent   = pad(m);
-    el.sec.textContent   = pad(s);
-
-    /* animazione pop ogni secondo */
-    if (s !== prevSec) {
-      prevSec = s;
-      el.sec.classList.remove('tick');
-      void el.sec.offsetWidth; /* reflow */
-      el.sec.classList.add('tick');
-
-      if (s === 0) {
-        el.min.classList.remove('tick');
-        void el.min.offsetWidth;
-        el.min.classList.add('tick');
-      }
-    }
-  }
-
-  tick();
-  setInterval(tick, 1000);
-})();
-
-/* ----- VIDEO OVERLAY ----- */
-(function () {
-  const video   = document.getElementById('main-video');
-  const overlay = document.getElementById('video-overlay');
-
-  if (!video || !overlay) return;
-
-  video.addEventListener('play', () => overlay.classList.add('hidden'));
-  video.addEventListener('pause', () => {
-    if (video.currentTime === 0) overlay.classList.remove('hidden');
-  });
-  video.addEventListener('ended', () => overlay.classList.remove('hidden'));
-})();
-</script>
-</body>
-</html>

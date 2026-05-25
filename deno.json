@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "serve": "deno run --allow-net --allow-read jsr:@std/http@1/file-server ./src",
+    "build": "deno run --allow-read --allow-write --allow-net --allow-env build.ts"
+  }
+}
