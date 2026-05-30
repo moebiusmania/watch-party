@@ -26,7 +26,7 @@ html { scroll-behavior: smooth; font-size: 16px; }
 body {
   background: var(--brown-deep);
   color: var(--parchment);
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'Arvo', Georgia, serif;
   overflow-x: hidden;
   cursor: default;
 }
@@ -157,36 +157,38 @@ body::after {
 
 /* Cappello CSS */
 .hat {
-  width: 140px; height: 70px;
+  width: 170px; height: 78px;
   position: relative;
   margin: 0 auto 2.5rem;
   animation: hatFloat 5s ease-in-out infinite;
   filter: drop-shadow(0 0 18px var(--glow-gold));
 }
 .hat-crown {
-  position: absolute; bottom:17px; left:50%; transform:translateX(-50%);
-  width: 80px; height: 53px;
+  position: absolute; bottom:16px; left:50%; transform:translateX(-50%);
+  width: 60px; height: 62px;
   background: var(--brown-dark);
   border: 2px solid var(--gold);
-  border-radius: 12px 12px 0 0;
+  border-radius: 10px 10px 2px 2px;
+  /* taper: slightly wider at bottom for the fedora shape */
+  clip-path: polygon(6% 0%, 94% 0%, 100% 100%, 0% 100%);
 }
 .hat-indent {
   position: absolute; top:0; left:50%; transform:translateX(-50%);
-  width: 30px; height: 12px;
+  width: 22px; height: 14px;
   background: var(--brown-deep);
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 10px 10px;
 }
 .hat-band {
-  position: absolute; bottom:27px; left:50%; transform:translateX(-50%);
-  width: 80px; height: 9px;
-  background: var(--gold); opacity:.65;
+  position: absolute; bottom:26px; left:50%; transform:translateX(-50%);
+  width: 62px; height: 8px;
+  background: var(--gold); opacity:.7;
 }
 .hat-brim {
   position: absolute; bottom:0; left:0;
-  width: 140px; height: 19px;
+  width: 170px; height: 14px;
   background: var(--brown-dark);
   border: 2px solid var(--gold);
-  border-radius: 6px;
+  border-radius: 50% 50% 4px 4px / 6px 6px 4px 4px;
 }
 
 @keyframes hatFloat {
@@ -196,7 +198,7 @@ body::after {
 
 /* Testi hero */
 .hero-eyebrow {
-  font-family: 'Cinzel', serif;
+  font-family: 'Oswald', sans-serif;
   font-size: clamp(.6rem,.9vw+.4rem,.8rem);
   letter-spacing: .6em;
   text-transform: uppercase;
@@ -221,7 +223,7 @@ body::after {
 }
 
 .hero-trilogy {
-  font-family: 'Cinzel', serif;
+  font-family: 'Oswald', sans-serif;
   font-size: clamp(.8rem, 1.8vw, 1.2rem);
   letter-spacing: .45em;
   color: var(--amber);
@@ -247,7 +249,7 @@ body::after {
 }
 
 .hero-subtitle {
-  font-family: 'Cinzel', serif;
+  font-family: 'Oswald', sans-serif;
   font-size: clamp(.75rem,1.4vw,1rem);
   letter-spacing: .4em;
   color: var(--parchment-mid);
@@ -542,6 +544,11 @@ section { position:relative; padding:5rem 2rem; }
   font-family:'Rye', cursive;
   color:var(--gold); font-size:.85rem;
   min-width:65px; padding-top:3px; flex-shrink:0;
+  line-height:1.4;
+}
+.prog-time small {
+  font-family:'Oswald', sans-serif;
+  font-size:.6rem; letter-spacing:.1em; color:var(--amber); display:block;
 }
 
 .prog-info h4 {
@@ -576,7 +583,7 @@ section { position:relative; padding:5rem 2rem; }
 }
 
 .quote-text {
-  font-family:'Libre Baskerville', serif;
+  font-family:'Arvo', serif;
   font-size:clamp(1.05rem,2vw,1.4rem);
   font-style:italic; line-height:1.75;
   color:var(--parchment);
