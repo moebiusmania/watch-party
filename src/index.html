@@ -1,269 +1,349 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Indiana Jones — Watch Party della Trilogia</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;500;700&family=Arvo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indiana Jones — Watch Party della Trilogia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;800&family=Oswald:wght@400;500;700&family=Arvo:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- PARTICELLE -->
-<div class="dust" aria-hidden="true">
-  <div class="dust-mote"></div><div class="dust-mote"></div><div class="dust-mote"></div>
-  <div class="dust-mote"></div><div class="dust-mote"></div><div class="dust-mote"></div>
-  <div class="dust-mote"></div><div class="dust-mote"></div><div class="dust-mote"></div>
-  <div class="dust-mote"></div><div class="dust-mote"></div><div class="dust-mote"></div>
-  <div class="dust-mote"></div><div class="dust-mote"></div>
-  <div class="star-particle">✦</div>
-  <div class="star-particle">✦</div>
-  <div class="star-particle">✦</div>
-</div>
-
-<!-- ===================== HERO ===================== -->
-<section class="hero">
-  <div class="corner tl" aria-hidden="true"></div>
-  <div class="corner tr" aria-hidden="true"></div>
-  <div class="corner bl" aria-hidden="true"></div>
-  <div class="corner br" aria-hidden="true"></div>
-
-  <div class="hat" aria-hidden="true">
-    <div class="hat-crown"><div class="hat-indent"></div></div>
-    <div class="hat-band"></div>
-    <div class="hat-brim"></div>
-  </div>
-
-  <p class="hero-eyebrow">Una serata leggendaria vi attende</p>
-
-  <h1 class="hero-title">Indiana Jones</h1>
-  <p class="hero-trilogy">La Trilogia Completa — Tre Serate di Watch Party</p>
-
-  <div class="whip" aria-hidden="true"></div>
-
-  <p class="hero-subtitle">Edizione Leggendaria · Solo per Invitati</p>
-
-  <p class="hero-intro">
-    Tre film. Tre serate separate. Ogni appuntamento inizia con snack e aperitivo,
-    poi si spengono le luci e l'avventura comincia — dal tempio perduto alle catacombe
-    di Venezia, fino alle sabbie di una crociata eterna.<br>
-    L'avventura ci chiama. Rispondete all'appello.
-  </p>
-
-  <div class="scroll-cue" aria-hidden="true">
-    <span>Scorri</span>
-    <div class="arrow-down"></div>
-  </div>
-</section>
-
-<!-- ===================== COUNTDOWN ===================== -->
-<section class="countdown-section">
-  <div class="section-inner">
-    <span class="eyebrow">Conto alla rovescia</span>
-    <h2 class="s-title">La Leggenda Ritorna</h2>
-
-    <p class="countdown-intro">
-      Ogni grande avventura ha un momento preciso in cui tutto comincia.<br>
-      Questo conto alla rovescia segna la prima delle tre serate. Il tempo stringe.<br>
-      Preparate gli snack, le coperte e la voglia di meravigliarvi.
-    </p>
-
-    <div class="countdown-grid">
-      <div class="cd-item">
-        <div class="cd-box" id="cd-days">00</div>
-        <span class="cd-label">Giorni</span>
-      </div>
-      <div class="cd-sep">:</div>
-      <div class="cd-item">
-        <div class="cd-box" id="cd-hours">00</div>
-        <span class="cd-label">Ore</span>
-      </div>
-      <div class="cd-sep">:</div>
-      <div class="cd-item">
-        <div class="cd-box" id="cd-min">00</div>
-        <span class="cd-label">Minuti</span>
-      </div>
-      <div class="cd-sep">:</div>
-      <div class="cd-item">
-        <div class="cd-box" id="cd-sec">00</div>
-        <span class="cd-label">Secondi</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== VIDEO ===================== -->
-<section class="video-section">
-  <div class="section-inner">
-    <span class="eyebrow">Anteprima</span>
-    <h2 class="s-title">Il Video della Serata</h2>
-    <p style="color:var(--parchment-mid);font-style:italic;margin-bottom:.5rem;font-size:.92rem;">
-      Inserisci qui il tuo <code style="color:var(--gold);font-style:normal">src="percorso/al/video.mp4"</code> e rimuovi l'overlay.
-    </p>
-
-    <div class="video-frame">
-      <div class="vc tl"></div><div class="vc tr"></div>
-      <div class="vc bl"></div><div class="vc br"></div>
-
-      <!-- ▼ Aggiungi src= al tag source quando hai il file video ▼ -->
-      <video id="main-video" controls preload="metadata">
-        <source src="" type="video/mp4">
-        Il tuo browser non supporta l&rsquo;elemento <code>video</code> HTML5.
-      </video>
-
-      <div class="video-overlay" id="video-overlay">
-        <div class="play-ring" aria-hidden="true"></div>
-        <p>Video in arrivo&hellip;</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== DETTAGLI ===================== -->
-<section class="details-section">
-  <div class="section-inner">
-    <span class="eyebrow">Dettagli del ritrovo</span>
-    <h2 class="s-title">Dove, Quando &amp; Come</h2>
-
-    <div class="cards-grid">
-      <div class="card">
-        <span class="card-icon">📍</span>
-        <span class="card-label">Luogo</span>
-        <p class="card-value">Casa di Marco</p>
-        <p class="card-sub">Via dell'Avventuriero, 42<br>Milano — Zona Navigli<br><em>(campanello: "Indy &amp; Co.")</em></p>
-      </div>
-      <div class="card">
-        <span class="card-icon">🎬</span>
-        <span class="card-label">Tre Serate</span>
-        <p class="card-value">ogni 2 giorni</p>
-        <p class="card-sub">Serata 1 · 21 lug — Raiders<br>Serata 2 · 23 lug — Tempio<br>Serata 3 · 25 lug — Crociata</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">🍿</span>
-        <span class="card-label">Cosa portare</span>
-        <p class="card-value">Sete d'avventura</p>
-        <p class="card-sub">Snack, bevande, coperta.<br>Popcorn forniti di casa.<br>Dress code: cappello facoltativo.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">✉️</span>
-        <span class="card-label">Conferma presenza</span>
-        <p class="card-value">Entro 3 giorni</p>
-        <p class="card-sub">Scrivi a Marco su WhatsApp<br>+39 333 000 0000<br>I posti sono limitati.</p>
-      </div>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- PARTICELLE -->
+    <div class="dust" aria-hidden="true">
+      <div class="dust-mote"></div>
+      <div class="dust-mote"></div>
+      <div class="dust-mote"></div>
+      <div class="dust-mote"></div>
+      <div class="dust-mote"></div>
+      <div class="dust-mote"></div>
+      <div class="dust-mote"></div>
+      <div class="dust-mote"></div>
+      <div class="dust-mote"></div>
+      <div class="dust-mote"></div>
+      <div class="dust-mote"></div>
+      <div class="dust-mote"></div>
+      <div class="dust-mote"></div>
+      <div class="dust-mote"></div>
+      <div class="star-particle">✦</div>
+      <div class="star-particle">✦</div>
+      <div class="star-particle">✦</div>
     </div>
 
-    <div class="ornament">
-      <div class="ornament-line"></div>
-      <span class="ornament-gem">✦</span>
-      <div class="ornament-line"></div>
-    </div>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="corner tl" aria-hidden="true"></div>
+      <div class="corner tr" aria-hidden="true"></div>
+      <div class="corner bl" aria-hidden="true"></div>
+      <div class="corner br" aria-hidden="true"></div>
 
-    <span class="eyebrow">Programma delle tre serate</span>
+      <div class="hat" aria-hidden="true">
+        <div class="hat-crown"><div class="hat-indent"></div></div>
+        <div class="hat-band"></div>
+        <div class="hat-brim"></div>
+      </div>
 
-    <div class="program">
-      <!-- SERATA 1 -->
-      <div class="prog-row">
-        <span class="prog-time">Sera 1<br><small>21 lug</small></span>
-        <div class="prog-info">
-          <h4>Apertura porte &amp; snack</h4>
-          <p>Arrivo dalle 18:30. Snack, bibite e quiz sui personaggi della saga — chi sarà il più grande fan?</p>
-        </div>
-      </div>
-      <div class="prog-row">
-        <span class="prog-time">19:00</span>
-        <div class="prog-info">
-          <h4>🎬 I Predatori dell'Arca Perduta (1981)</h4>
-          <p>Il film che ha dato inizio alla leggenda. Raiders of the Lost Ark — dove tutto è cominciato.</p>
-        </div>
-      </div>
-      <!-- SERATA 2 -->
-      <div class="prog-row">
-        <span class="prog-time">Sera 2<br><small>23 lug</small></span>
-        <div class="prog-info">
-          <h4>Apertura porte &amp; snack</h4>
-          <p>Arrivo dalle 18:30. Snack, bibite e un po' di suspense prima del capitolo più oscuro della saga.</p>
-        </div>
-      </div>
-      <div class="prog-row">
-        <span class="prog-time">19:00</span>
-        <div class="prog-info">
-          <h4>🎬 Indiana Jones e il Tempio Maledetto (1984)</h4>
-          <p>Più oscuro, più adrenalinico. Una discesa agli inferi che lascia il segno.</p>
-        </div>
-      </div>
-      <!-- SERATA 3 -->
-      <div class="prog-row">
-        <span class="prog-time">Sera 3<br><small>25 lug</small></span>
-        <div class="prog-info">
-          <h4>Apertura porte &amp; snack</h4>
-          <p>Arrivo dalle 18:30. Snack, bibite e il gran finale. Tre serate, una leggenda.</p>
-        </div>
-      </div>
-      <div class="prog-row">
-        <span class="prog-time">19:00</span>
-        <div class="prog-info">
-          <h4>🎬 Indiana Jones e l'Ultima Crociata (1988)</h4>
-          <p>Il film del cuore. Indy &amp; suo padre — Sean Connery in una delle sue migliori interpretazioni.</p>
-        </div>
-      </div>
-      <div class="prog-row">
-        <span class="prog-time">21:15</span>
-        <div class="prog-info">
-          <h4>Fine serata &amp; saluti</h4>
-          <p>Discussioni animate, un brindisi all'avventura e buona fortuna per il rientro.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      <p class="hero-eyebrow">Una serata leggendaria vi attende</p>
 
-<!-- ===================== CHIUSURA ===================== -->
-<section class="closing-section">
-  <div class="section-inner">
-    <div class="ornament">
-      <div class="ornament-line"></div>
-      <span class="ornament-gem">✦</span>
-      <div class="ornament-line"></div>
-    </div>
-
-    <!-- Torce CSS decorative -->
-    <div class="torch torch-left" aria-hidden="true">
-      <div class="torch-flame"></div>
-      <div class="torch-handle"></div>
-    </div>
-    <div class="torch torch-right" aria-hidden="true">
-      <div class="torch-flame"></div>
-      <div class="torch-handle"></div>
-    </div>
-
-    <span class="eyebrow">Il nostro invito</span>
-
-    <div class="quote-block">
-      <p class="quote-text">
-        Non è il cinema che ci riunisce — è il desiderio di vivere qualcosa insieme,
-        di ridere, meravigliarci e sentire di nuovo quel brivido che solo certi film
-        sanno regalarti. Vi aspettiamo. Con il cappello, la frusta e un bicchiere colmo.
+      <h1 class="hero-title">Indiana Jones</h1>
+      <p class="hero-trilogy">
+        La Trilogia Completa — Tre Serate di Watch Party
       </p>
-      <span class="quote-sig">— I vostri ospiti della serata</span>
-    </div>
 
-    <p class="tagline">It belongs in a museum — e anche voi, quella sera.</p>
+      <div class="whip" aria-hidden="true"></div>
 
-    <a class="cta-btn" href="https://wa.me/393330000000" target="_blank" rel="noopener">
+      <p class="hero-subtitle">Edizione Leggendaria · Solo per Invitati</p>
+
+      <p class="hero-intro">
+        Tre film. Tre serate separate. Ogni appuntamento inizia con snack e
+        aperitivo, poi si spengono le luci e l'avventura comincia — dal tempio
+        perduto alle catacombe di Venezia, fino alle sabbie di una crociata
+        eterna.<br />
+        L'avventura ci chiama. Rispondete all'appello.
+      </p>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span>Scorri</span>
+        <div class="arrow-down"></div>
+      </div>
+    </section>
+
+    <!-- ===================== COUNTDOWN ===================== -->
+    <section class="countdown-section">
+      <div class="section-inner">
+        <span class="eyebrow">Conto alla rovescia</span>
+        <h2 class="s-title">La Leggenda Ritorna</h2>
+
+        <p class="countdown-intro">
+          Ogni grande avventura ha un momento preciso in cui tutto comincia.<br />
+          Questo conto alla rovescia segna la prima delle tre serate. Il tempo
+          stringe.<br />
+          Preparate gli snack, le coperte e la voglia di meravigliarvi.
+        </p>
+
+        <div class="countdown-grid">
+          <div class="cd-item">
+            <div class="cd-box" id="cd-days">00</div>
+            <span class="cd-label">Giorni</span>
+          </div>
+          <div class="cd-sep">:</div>
+          <div class="cd-item">
+            <div class="cd-box" id="cd-hours">00</div>
+            <span class="cd-label">Ore</span>
+          </div>
+          <div class="cd-sep">:</div>
+          <div class="cd-item">
+            <div class="cd-box" id="cd-min">00</div>
+            <span class="cd-label">Minuti</span>
+          </div>
+          <div class="cd-sep">:</div>
+          <div class="cd-item">
+            <div class="cd-box" id="cd-sec">00</div>
+            <span class="cd-label">Secondi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VIDEO ===================== -->
+    <section class="video-section">
+      <div class="section-inner">
+        <span class="eyebrow">Anteprima</span>
+        <h2 class="s-title">Trailer dell'evento</h2>
+        <p
+          style="
+            color: var(--parchment-mid);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            font-size: 0.92rem;
+          "
+        >
+          Inserisci qui il tuo
+          <code style="color: var(--gold); font-style: normal"
+            >src="percorso/al/video.mp4"</code
+          >
+          e rimuovi l'overlay.
+        </p>
+
+        <div class="video-frame">
+          <div class="vc tl"></div>
+          <div class="vc tr"></div>
+          <div class="vc bl"></div>
+          <div class="vc br"></div>
+
+          <!-- ▼ Aggiungi src= al tag source quando hai il file video ▼ -->
+          <video id="main-video" controls preload="metadata">
+            <source src="" type="video/mp4" />
+            Il tuo browser non supporta l&rsquo;elemento
+            <code>video</code> HTML5.
+          </video>
+
+          <div class="video-overlay" id="video-overlay">
+            <div class="play-ring" aria-hidden="true"></div>
+            <p>Video in arrivo&hellip;</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DETTAGLI ===================== -->
+    <section class="details-section">
+      <div class="section-inner">
+        <span class="eyebrow">Dettagli del ritrovo</span>
+        <h2 class="s-title">Dove, Quando &amp; Come</h2>
+
+        <div class="cards-grid">
+          <div class="card">
+            <span class="card-icon">📍</span>
+            <span class="card-label">Luogo</span>
+            <p class="card-value">Da Angelice e Salvatore</p>
+            <p class="card-sub">
+              Via dell'Avventuriero, 42<br />Lillaz<br /><em
+                >(campanello: "Jones")</em
+              >
+            </p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🎬</span>
+            <span class="card-label">Tre Serate</span>
+            <p class="card-value">ogni 2 giorni</p>
+            <p class="card-sub">
+              Serata 1 · 21 lug — Raiders<br />Serata 2 · 23 lug — Tempio<br />Serata
+              3 · 25 lug — Crociata
+            </p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🍿</span>
+            <span class="card-label">Cosa portare</span>
+            <p class="card-value">Sete d'avventura</p>
+            <p class="card-sub">
+              Snack, bevande, coperta e<br />popcorn forniti di casa.<br />Dress
+              code: cappello facoltativo.
+            </p>
+          </div>
+        </div>
+
+        <div class="ornament">
+          <div class="ornament-line"></div>
+          <span class="ornament-gem">✦</span>
+          <div class="ornament-line"></div>
+        </div>
+
+        <span class="eyebrow">Programma delle tre serate</span>
+
+        <div class="program">
+          <!-- ── SERATA 1 ── -->
+          <div class="prog-group">
+            <div class="prog-group-header">
+              <span class="prog-group-night">Serata 1</span>
+              <span class="prog-group-date">21 luglio</span>
+            </div>
+            <div class="prog-row">
+              <span class="prog-time">18:30</span>
+              <div class="prog-info">
+                <h4>Apertura porte &amp; snack</h4>
+                <p>
+                  Arrivo dalle 18:30. Snack, bibite e quiz sui personaggi della
+                  saga — chi sarà il più grande fan?
+                </p>
+              </div>
+            </div>
+            <div class="prog-row">
+              <span class="prog-time">19:00</span>
+              <div class="prog-info">
+                <h4>🎬 I Predatori dell'Arca Perduta (1981)</h4>
+                <p>
+                  Il film che ha dato inizio alla leggenda. Raiders of the Lost
+                  Ark — dove tutto è cominciato.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── SERATA 2 ── -->
+          <div class="prog-group">
+            <div class="prog-group-header">
+              <span class="prog-group-night">Serata 2</span>
+              <span class="prog-group-date">23 luglio</span>
+            </div>
+            <div class="prog-row">
+              <span class="prog-time">18:30</span>
+              <div class="prog-info">
+                <h4>Apertura porte &amp; snack</h4>
+                <p>
+                  Arrivo dalle 18:30. Snack, bibite e un po' di suspense prima
+                  del capitolo più oscuro della saga.
+                </p>
+              </div>
+            </div>
+            <div class="prog-row">
+              <span class="prog-time">19:00</span>
+              <div class="prog-info">
+                <h4>🎬 Indiana Jones e il Tempio Maledetto (1984)</h4>
+                <p>
+                  Più oscuro, più adrenalinico. Una discesa agli inferi che
+                  lascia il segno.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── SERATA 3 ── -->
+          <div class="prog-group">
+            <div class="prog-group-header">
+              <span class="prog-group-night">Serata 3</span>
+              <span class="prog-group-date">25 luglio</span>
+            </div>
+            <div class="prog-row">
+              <span class="prog-time">18:30</span>
+              <div class="prog-info">
+                <h4>Apertura porte &amp; snack</h4>
+                <p>
+                  Arrivo dalle 18:30. Snack, bibite e il gran finale. Tre
+                  serate, una leggenda.
+                </p>
+              </div>
+            </div>
+            <div class="prog-row">
+              <span class="prog-time">19:00</span>
+              <div class="prog-info">
+                <h4>🎬 Indiana Jones e l'Ultima Crociata (1988)</h4>
+                <p>
+                  Il film del cuore. Indy &amp; suo padre — Sean Connery in una
+                  delle sue migliori interpretazioni.
+                </p>
+              </div>
+            </div>
+            <div class="prog-row">
+              <span class="prog-time">21:15</span>
+              <div class="prog-info">
+                <h4>Fine serata &amp; saluti</h4>
+                <p>
+                  Discussioni animate, un brindisi all'avventura e buona fortuna
+                  per il rientro.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CHIUSURA ===================== -->
+    <section class="closing-section">
+      <div class="section-inner">
+        <div class="ornament">
+          <div class="ornament-line"></div>
+          <span class="ornament-gem">✦</span>
+          <div class="ornament-line"></div>
+        </div>
+
+        <!-- Torce CSS decorative -->
+        <div class="torch torch-left" aria-hidden="true">
+          <div class="torch-flame"></div>
+          <div class="torch-handle"></div>
+        </div>
+        <div class="torch torch-right" aria-hidden="true">
+          <div class="torch-flame"></div>
+          <div class="torch-handle"></div>
+        </div>
+
+        <span class="eyebrow">Il nostro invito</span>
+
+        <div class="quote-block">
+          <p class="quote-text">
+            Non è il cinema che ci riunisce — è il desiderio di vivere qualcosa
+            insieme, di ridere, meravigliarci e sentire di nuovo quel brivido
+            che solo certi film sanno regalarti. Vi aspettiamo. Con il cappello,
+            la frusta e un bicchiere colmo.
+          </p>
+          <span class="quote-sig">— I vostri ospiti della serata</span>
+        </div>
+
+        <p class="tagline">
+          It belongs in a museum — e anche voi, quella sera.
+        </p>
+
+        <!-- <a class="cta-btn" href="https://wa.me/393330000000" target="_blank" rel="noopener">
       Confermo la Presenza
-    </a>
-  </div>
+    </a> -->
+      </div>
 
-  <footer class="site-footer">
-    <p>Watch Party Privato &nbsp;·&nbsp; Trilogia di Indiana Jones &nbsp;·&nbsp; Solo per Invitati</p>
-  </footer>
-</section>
+      <footer class="site-footer">
+        <p>
+          Watch Party Privato &nbsp;·&nbsp; Trilogia di Indiana Jones
+          &nbsp;·&nbsp; Solo per Invitati
+        </p>
+      </footer>
+    </section>
 
-<!-- ===================================================
+    <!-- ===================================================
      JAVASCRIPT
      =================================================== -->
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

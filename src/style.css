@@ -209,7 +209,7 @@ body::after {
 }
 
 .hero-title {
-  font-family: 'Rye', cursive;
+  font-family: 'Cinzel Decorative', serif;
   font-size: clamp(3.2rem, 9vw, 8rem);
   line-height: .95;
   color: var(--parchment);
@@ -310,7 +310,7 @@ section { position:relative; padding:5rem 2rem; }
 }
 
 .s-title {
-  font-family:'Rye', cursive;
+  font-family:'Cinzel Decorative', serif;
   font-size:clamp(1.8rem,4vw,3rem);
   color:var(--parchment);
   text-shadow:2px 2px 0 var(--brown-deep);
@@ -364,7 +364,7 @@ section { position:relative; padding:5rem 2rem; }
 }
 
 .cd-box {
-  font-family:'Rye', cursive;
+  font-family:'Cinzel Decorative', serif;
   font-size:clamp(2.4rem,6vw,5.2rem);
   color:var(--parchment);
   width:clamp(82px,14vw,136px);
@@ -408,7 +408,7 @@ section { position:relative; padding:5rem 2rem; }
 }
 
 .cd-sep {
-  font-family:'Rye', cursive;
+  font-family:'Cinzel', serif;
   font-size:clamp(1.8rem,5vw,4rem);
   color:var(--gold-dim);
   margin-bottom:1.4rem;
@@ -521,7 +521,7 @@ section { position:relative; padding:5rem 2rem; }
 }
 
 .card-value {
-  font-family:'Rye', cursive;
+  font-family:'Cinzel', serif;
   font-size:1.1rem; color:var(--parchment);
   margin-bottom:.4rem;
 }
@@ -531,7 +531,29 @@ section { position:relative; padding:5rem 2rem; }
   line-height:1.65;
 }
 
-.program { margin-top:2.5rem; }
+.program { margin-top:2.5rem; display:flex; flex-direction:column; gap:2.5rem; }
+
+.prog-group {
+  border-left:2px solid rgba(201,148,10,.35);
+  padding-left:1.5rem;
+}
+
+.prog-group-header {
+  display:flex; align-items:baseline; gap:.75rem;
+  margin-bottom:.25rem; padding-bottom:.75rem;
+  border-bottom:1px solid rgba(201,148,10,.2);
+}
+
+.prog-group-night {
+  font-family:'Cinzel', serif;
+  font-size:1rem; color:var(--gold);
+}
+
+.prog-group-date {
+  font-family:'Oswald', sans-serif;
+  font-size:.72rem; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--amber);
+}
 
 .prog-row {
   display:flex; gap:2rem; padding:1.4rem 0;
@@ -541,7 +563,7 @@ section { position:relative; padding:5rem 2rem; }
 .prog-row:last-child { border-bottom:none; }
 
 .prog-time {
-  font-family:'Rye', cursive;
+  font-family:'Cinzel', serif;
   color:var(--gold); font-size:.85rem;
   min-width:65px; padding-top:3px; flex-shrink:0;
   line-height:1.4;
@@ -577,7 +599,7 @@ section { position:relative; padding:5rem 2rem; }
 .quote-block::before {
   content:'\201C';
   position:absolute; top:-10px; left:0;
-  font-family:'Rye', cursive;
+  font-family:'Cinzel Decorative', serif;
   font-size:6rem; color:var(--gold); opacity:.25;
   line-height:1;
 }
