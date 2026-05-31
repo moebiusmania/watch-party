@@ -42,9 +42,67 @@
       <div class="corner br" aria-hidden="true"></div>
 
       <div class="hat" aria-hidden="true">
-        <div class="hat-crown"><div class="hat-indent"></div></div>
-        <div class="hat-band"></div>
-        <div class="hat-brim"></div>
+        <svg viewBox="0 32 220 80" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hat-side-grad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="rgba(22,9,4,0.55)" />
+              <stop offset="35%" stop-color="rgba(22,9,4,0)" />
+              <stop offset="75%" stop-color="rgba(22,9,4,0)" />
+              <stop offset="100%" stop-color="rgba(22,9,4,0.3)" />
+            </linearGradient>
+          </defs>
+
+          <!-- Brim drop shadow -->
+          <ellipse cx="110" cy="106" rx="100" ry="5" fill="rgba(0,0,0,0.35)" />
+
+          <!-- Brim -->
+          <path
+            d="M 7,93 C 28,90 54,88 68,88 L 152,88 C 166,88 192,90 213,93 C 205,100 175,108 110,108 C 45,108 15,100 7,93 Z"
+            fill="var(--brown-dark)"
+            stroke="var(--gold)"
+            stroke-width="1.5"
+          />
+
+          <!-- Crown -->
+          <path
+            d="M 68,88 C 63,76 61,61 64,48 C 66,43 75,39 84,39 C 90,38 97,41 101,43 C 104,45 107,46 110,46 C 113,46 116,45 119,43 C 123,41 130,38 136,39 C 145,39 154,43 156,48 C 159,61 157,76 152,88 Z"
+            fill="var(--brown-dark)"
+            stroke="var(--gold)"
+            stroke-width="1.5"
+          />
+
+          <!-- Crown side shading for depth -->
+          <path
+            d="M 68,88 C 63,76 61,61 64,48 C 66,43 75,39 84,39 C 90,38 97,41 101,43 C 104,45 107,46 110,46 C 113,46 116,45 119,43 C 123,41 130,38 136,39 C 145,39 154,43 156,48 C 159,61 157,76 152,88 Z"
+            fill="url(#hat-side-grad)"
+            stroke="none"
+          />
+
+          <!-- Hat band -->
+          <path
+            d="M 69,83 C 83,81 96,80 110,80 C 124,80 137,81 151,83 L 152,88 C 138,87 124,86 110,86 C 96,86 82,87 69,88 Z"
+            fill="var(--gold)"
+            fill-opacity="0.7"
+          />
+
+          <!-- Crown center crease (the Indy dent) -->
+          <path
+            d="M 104,42 C 106,44 108,46 110,45 C 112,46 114,44 116,42"
+            fill="none"
+            stroke="var(--gold)"
+            stroke-width="0.8"
+            stroke-opacity="0.4"
+          />
+
+          <!-- Brim highlight -->
+          <path
+            d="M 14,93 C 42,90 72,89 110,89 C 148,89 178,90 206,93"
+            fill="none"
+            stroke="var(--gold-bright)"
+            stroke-width="0.75"
+            stroke-opacity="0.2"
+          />
+        </svg>
       </div>
 
       <p class="hero-eyebrow">Una serata leggendaria vi attende</p>
@@ -59,10 +117,8 @@
       <p class="hero-subtitle">Edizione Leggendaria · Solo per Invitati</p>
 
       <p class="hero-intro">
-        Tre film. Tre serate separate. Ogni appuntamento inizia con snack e
-        aperitivo, poi si spengono le luci e l'avventura comincia — dal tempio
-        perduto alle catacombe di Venezia, fino alle sabbie di una crociata
-        eterna.<br />
+        Tre film. Tre serate separate. Dal tempio perduto alle catacombe di
+        Venezia, fino alle sabbie di una crociata eterna.<br />
         L'avventura ci chiama. Rispondete all'appello.
       </p>
 
@@ -78,12 +134,12 @@
         <span class="eyebrow">Conto alla rovescia</span>
         <h2 class="s-title">La Leggenda Ritorna</h2>
 
-        <p class="countdown-intro">
+        <!-- <p class="countdown-intro">
           Ogni grande avventura ha un momento preciso in cui tutto comincia.<br />
           Questo conto alla rovescia segna la prima delle tre serate. Il tempo
           stringe.<br />
           Preparate gli snack, le coperte e la voglia di meravigliarvi.
-        </p>
+        </p> -->
 
         <div class="countdown-grid">
           <div class="cd-item">
@@ -324,9 +380,7 @@
           <span class="quote-sig">— I vostri ospiti della serata</span>
         </div>
 
-        <p class="tagline">
-          It belongs in a museum — e anche voi, quella sera.
-        </p>
+        <p class="tagline">"It belongs in a museum!" — Dr. Jones</p>
 
         <!-- <a class="cta-btn" href="https://wa.me/393330000000" target="_blank" rel="noopener">
       Confermo la Presenza

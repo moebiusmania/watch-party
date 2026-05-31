@@ -155,41 +155,15 @@ body::after {
 .corner.bl { bottom:70px; left:24px;  border-width:0 0 2px 2px; }
 .corner.br { bottom:70px; right:24px; border-width:0 2px 2px 0; }
 
-/* Cappello CSS */
+/* Cappello SVG */
 .hat {
-  width: 170px; height: 78px;
+  width: 200px;
   position: relative;
   margin: 0 auto 2.5rem;
   animation: hatFloat 5s ease-in-out infinite;
   filter: drop-shadow(0 0 18px var(--glow-gold));
 }
-.hat-crown {
-  position: absolute; bottom:16px; left:50%; transform:translateX(-50%);
-  width: 60px; height: 62px;
-  background: var(--brown-dark);
-  border: 2px solid var(--gold);
-  border-radius: 10px 10px 2px 2px;
-  /* taper: slightly wider at bottom for the fedora shape */
-  clip-path: polygon(6% 0%, 94% 0%, 100% 100%, 0% 100%);
-}
-.hat-indent {
-  position: absolute; top:0; left:50%; transform:translateX(-50%);
-  width: 22px; height: 14px;
-  background: var(--brown-deep);
-  border-radius: 0 0 10px 10px;
-}
-.hat-band {
-  position: absolute; bottom:26px; left:50%; transform:translateX(-50%);
-  width: 62px; height: 8px;
-  background: var(--gold); opacity:.7;
-}
-.hat-brim {
-  position: absolute; bottom:0; left:0;
-  width: 170px; height: 14px;
-  background: var(--brown-dark);
-  border: 2px solid var(--gold);
-  border-radius: 50% 50% 4px 4px / 6px 6px 4px 4px;
-}
+.hat svg { display: block; width: 100%; height: auto; }
 
 @keyframes hatFloat {
   0%,100% { transform: translateY(0) rotate(-3deg); }
