@@ -6,7 +6,7 @@ const js = await Deno.readTextFile("src/script.js");
 
 let merged = html
   .replace(
-    '<link rel="stylesheet" href="style.css">',
+    /<link rel="stylesheet" href="style\.css"\s*\/?>/,
     `<style>${css}</style>`,
   )
   .replace(
