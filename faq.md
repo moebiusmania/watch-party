@@ -1,0 +1,8 @@
+- Come ci si organizza per la cena?
+  - l'idea è di fare tipo delle "apericene" a buffet, si mangia durante il film.
+- Posso contribuire con il cibo?
+  - si, è cosa molto gradita!
+- Finiamo a mezzanotte come l'anno scorso?
+  - assolutamente no, puntiamo a iniziare la visione del film intorno alle 20 e questi film al contrario di LotR durano poco meno di 2 ore l'uno.
+- Date e orari sono definitivi?
+  - no, sono una prima idea, potrebbero cambiare in base ad eventuali impegni o imprevisti.

@@ -557,6 +557,38 @@ section { position:relative; padding:5rem 2rem; }
 }
 
 /* ===================================================
+   FAQ
+   =================================================== */
+.faq-list {
+  margin-top:2.5rem;
+  display:flex; flex-direction:column; gap:1rem;
+}
+
+.faq-item {
+  border-left:2px solid rgba(201,148,10,.45);
+  padding:1.2rem 1rem 1.2rem 1.8rem;
+  transition:border-left-color .3s, background .3s;
+}
+.faq-item:hover {
+  border-left-color:var(--gold);
+  background:rgba(201,148,10,.04);
+}
+.faq-item + .faq-item {
+  margin-top:2rem;
+}
+
+.faq-q {
+  font-family:'Cinzel', serif;
+  font-size:.92rem; color:var(--gold);
+  margin:0 0 1rem; line-height:1.4;
+}
+
+.faq-a {
+  font-size:.85rem; color:var(--parchment-mid);
+  font-style:italic; line-height:1.7; margin:0;
+}
+
+/* ===================================================
    CHIUSURA
    =================================================== */
 .closing-section {
