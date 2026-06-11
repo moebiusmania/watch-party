@@ -49,17 +49,3 @@
   tick();
   setInterval(tick, 1000);
 })();
-
-/* ----- VIDEO OVERLAY ----- */
-(function () {
-  const video   = document.getElementById('main-video');
-  const overlay = document.getElementById('video-overlay');
-
-  if (!video || !overlay) return;
-
-  video.addEventListener('play', () => overlay.classList.add('hidden'));
-  video.addEventListener('pause', () => {
-    if (video.currentTime === 0) overlay.classList.remove('hidden');
-  });
-  video.addEventListener('ended', () => overlay.classList.remove('hidden'));
-})();
