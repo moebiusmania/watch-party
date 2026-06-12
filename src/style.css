@@ -401,7 +401,7 @@ section { position:relative; padding:5rem 2rem; }
 .poster-frame {
   position:relative;
   max-width:520px; margin:0 auto;
-  aspect-ratio:1/1;
+  aspect-ratio:1000/961;
   background:#0a0402;
   border:2px solid var(--gold-dim);
   box-shadow:
