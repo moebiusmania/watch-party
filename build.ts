@@ -23,5 +23,6 @@ const minified = await minify(merged, {
 
 await Deno.mkdir("dist", { recursive: true });
 await Deno.writeTextFile("dist/index.html", minified);
+await Deno.copyFile("src/favicon.svg", "dist/favicon.svg");
 await Deno.copyFile("src/preview.jpeg", "dist/preview.jpeg");
 await Deno.copyFile("src/poster.jpg", "dist/poster.jpg");

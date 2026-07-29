@@ -1,51 +1,48 @@
-/* ----- COUNTDOWN ----- */
-(function () {
-  const TARGET = new Date('2026-07-21T18:30:00');
+// ── Matrix rain canvas ──
+const canvas = document.getElementById('rain');
+const ctx = canvas.getContext('2d');
+const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let cols, drops;
 
-  const el = {
-    days:  document.getElementById('cd-days'),
-    hours: document.getElementById('cd-hours'),
-    min:   document.getElementById('cd-min'),
-    sec:   document.getElementById('cd-sec'),
-  };
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  cols = Math.floor(canvas.width / 16);
+  drops = Array(cols).fill(1);
+}
+resize();
+window.addEventListener('resize', resize);
 
-  let prevSec = -1;
-
-  function pad(n) { return String(n).padStart(2, '0'); }
-
-  function tick() {
-    const now  = new Date();
-    const diff = TARGET - now;
-
-    if (diff <= 0) {
-      Object.values(el).forEach(e => e.textContent = '00');
-      return;
-    }
-
-    const d = Math.floor(diff / 864e5);
-    const h = Math.floor((diff % 864e5) / 36e5);
-    const m = Math.floor((diff % 36e5)  / 6e4);
-    const s = Math.floor((diff % 6e4)   / 1e3);
-
-    el.days.textContent  = pad(d);
-    el.hours.textContent = pad(h);
-    el.min.textContent   = pad(m);
-    el.sec.textContent   = pad(s);
-
-    if (s !== prevSec) {
-      prevSec = s;
-      el.sec.classList.remove('tick');
-      void el.sec.offsetWidth;
-      el.sec.classList.add('tick');
-
-      if (s === 0) {
-        el.min.classList.remove('tick');
-        void el.min.offsetWidth;
-        el.min.classList.add('tick');
-      }
-    }
+function drawRain() {
+  ctx.fillStyle = 'rgba(10,10,10,0.05)';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.font = '14px "Share Tech Mono", monospace';
+  for (let i = 0; i < drops.length; i++) {
+    const bright = Math.random() > 0.9;
+    ctx.fillStyle = bright ? '#ffffff' : '#00ff41';
+    ctx.globalAlpha = bright ? 0.9 : 0.5 + Math.random() * 0.4;
+    const ch = chars[Math.floor(Math.random() * chars.length)];
+    ctx.fillText(ch, i * 16, drops[i] * 16);
+    ctx.globalAlpha = 1;
+    if (drops[i] * 16 > canvas.height && Math.random() > 0.975) drops[i] = 0;
+    drops[i]++;
   }
+}
+setInterval(drawRain, 50);
 
-  tick();
-  setInterval(tick, 1000);
-})();
+// ── Poster rain columns ──
+const posterRain = document.getElementById('posterRain');
+const rainChars = '01アイウエオ10カキクアイ10ウエオ';
+for (let i = 0; i < 12; i++) {
+  const col = document.createElement('div');
+  col.className = 'poster-col';
+  col.style.setProperty('--d', (Math.random() * 3) + 's');
+  col.style.setProperty('--delay', '-' + (Math.random() * 5) + 's');
+  col.style.animationDuration = (3 + Math.random() * 5) + 's';
+  let txt = '';
+  for (let j = 0; j < 30; j++) {
+    txt += rainChars[Math.floor(Math.random() * rainChars.length)] + '<br>';
+  }
+  col.innerHTML = txt;
+  posterRain.appendChild(col);
+}
